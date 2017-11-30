@@ -17,7 +17,7 @@ class OptimizerChainFactory
         self::MODE_JPG_PRESERVE_COLORS,
     ];
 
-    public static function create($mode = self::MODE_JPG_AGGRESSIVE): OptimizerChain
+    public static function create($mode = self::MODE_JPG_AGGRESSIVE)
     {
         if (!in_array($mode, self::MODES_JPG)) {
             throw new \Exception('Invalid jpg mode parameter used.');

@@ -15,12 +15,12 @@ abstract class BaseOptimizer implements Optimizer
         $this->setOptions($options);
     }
 
-    public function binaryName(): string
+    public function binaryName()
     {
         return $this->binaryName;
     }
 
-    public function setImagePath(string $imagePath)
+    public function setImagePath($imagePath)
     {
         $this->imagePath = $imagePath;
 
@@ -34,7 +34,7 @@ abstract class BaseOptimizer implements Optimizer
         return $this;
     }
 
-    public function getCommand(): string
+    public function getCommand()
     {
         $optionString = implode(' ', $this->options);
 

@@ -21,7 +21,7 @@ class OptimizerChain
         $this->useLogger(new DummyLogger());
     }
 
-    public function getOptimizers(): array
+    public function getOptimizers()
     {
         return $this->optimizers;
     }
@@ -47,7 +47,7 @@ class OptimizerChain
     /*
      * Set the amount of seconds each separate optimizer may use.
      */
-    public function setTimeout(int $timeoutInSeconds)
+    public function setTimeout($timeoutInSeconds)
     {
         $this->timeout = $timeoutInSeconds;
 
@@ -61,7 +61,7 @@ class OptimizerChain
         return $this;
     }
 
-    public function optimize(string $pathToImage, string $pathToOutput = null)
+    public function optimize($pathToImage, $pathToOutput = null)
     {
         if ($pathToOutput) {
             copy($pathToImage, $pathToOutput);
